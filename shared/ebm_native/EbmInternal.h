@@ -159,7 +159,7 @@ INLINE_ALWAYS void StopClangAnalysis() ANALYZER_NORETURN {
 constexpr FloatEbmType k_illegalGain = std::numeric_limits<FloatEbmType>::lowest();
 constexpr FloatEbmType k_epsilonNegativeGainAllowed = -1e-7;
 constexpr FloatEbmType k_epsilonNegativeValidationMetricAllowed = -1e-7;
-constexpr FloatEbmType k_epsilonResidualError = 1e-7;
+constexpr FloatEbmType k_epsilonResidualError = 1e-2;
 constexpr FloatEbmType k_epsilonLogLoss = 1e-7;
 
 // The C++ standard makes it undefined behavior to access memory past the end of an array with a declared length.
@@ -493,7 +493,7 @@ static constexpr ptrdiff_t k_iZeroResidual = -1;
 static constexpr ptrdiff_t k_iZeroClassificationLogitAtInitialize = -1;
 
 // TODO eventually consider using these approximate functions for exp and log.  They make a BIG difference!
-//#define FAST_EXP
+#define FAST_EXP
 //#define FAST_LOG
 
 #ifdef FAST_EXP
