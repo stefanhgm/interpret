@@ -707,8 +707,6 @@ class BaseEBM(BaseEstimator):
             max_bins=self.max_bins,
             binning=self.binning,
         )
-        # Test
-        print("Test")
         self.preprocessor_.fit(X)
 
         X_orig = X
