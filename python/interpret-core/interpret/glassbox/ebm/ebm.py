@@ -707,6 +707,9 @@ class BaseEBM(BaseEstimator):
             max_bins=self.max_bins,
             binning=self.binning,
         )
+        # Hack to force a separate bin for unknown values
+
+
         self.preprocessor_.fit(X)
 
         X_orig = X
